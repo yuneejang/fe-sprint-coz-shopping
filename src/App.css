@@ -567,7 +567,7 @@ color: #000000;
 
 /* Inside auto layout */
 
-flex: none;
+/* flex: none;
 order: 0;
 flex-grow: 0; */
 
@@ -674,4 +674,113 @@ align-items: left;
   
   color: #000000;
   
+}
+
+.item-info-interest-numbers{
+  /* position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 65.82%;
+  right: 5%;   */
+
+  position: absolute;
+  
+  right: 0%;
+  top: 90.91%;
+  bottom: 0%;
+  
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  display: flex;
+  align-items: center;
+  text-align: right;
+  
+  color: #000000;
+
+}
+.item-info-interest{
+
+  position: absolute;
+right: 0%;
+top: 81.82%;
+bottom: 9.09%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #000000;
+}
+
+
+.item-info-name{
+  /* 상품 이름 */
+
+
+position: absolute;
+left: 0%;
+
+top: 81.82%;
+bottom: 9.09%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+
+color: #000000;
+}
+.item-info-discount{
+  /* 할인률 */
+
+
+position: absolute;
+right: 0%;
+top: 81.82%;
+bottom: 9.09%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 800;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #452CDD;
+
+}
+
+.item-info-price{
+  /* 상품 가격 */
+
+
+position: absolute;
+right: -0.76%;
+top: 90.91%;
+bottom: 0%;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: right;
+
+color: #000000;
+
 }

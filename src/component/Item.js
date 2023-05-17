@@ -15,7 +15,7 @@ export default function Item({item}) {
           />
           <Bookmark/> */}
           <BookmarkIcon className="item-bookmark"/>
-      <div className="item-info-1">추가정보1</div>
+      <div className="item-info-name">추가정보1</div>
           {/* <img
            id="bookmark"
            src={`${process.env.PUBLIC_URL}/images/bookmark-off.png`}

@@ -19,7 +19,7 @@ function App() {
       <Router>
         <Nav isOpen={isOpen} setIsOpen={setIsOpen}/>
         <Routes>
-          <Route path="/" element={<Main/>}/>
+          <Route path="/" element={<Main items={items}/>}/>
           <Route path="/products/list" element={<Products filterIcons={filterIcons} setFilters={setFilters} items={items} setItems={setItems} />}/>          
           <Route path="/bookmark" element={<Bookmark filterIcons={filterIcons} setFilters={setFilters} />}/>
           <Route path="/*" element={<Empty/>}/>
