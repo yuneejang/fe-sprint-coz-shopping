@@ -320,23 +320,24 @@ color: #888888;
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* padding: 0px; */
+  padding: 0px;
   gap: 24px;
   
   position: relative;
   /* width: 1280px; 
   height: 832px;  */
+  width: 100%;
   height: calc(100vh - 7.5rem);
   /* overflow-y: scroll; */
   
   /* background: #FFFFFF; */
-  border: 1px dotted red;
+  /* border: 1px dotted red; */
 
 
 }
 .main-title-product{
   /* position: relative; */
-  position: absolute;
+position: absolute;
 left: 15%;
 /* right: 42.73%;  */
 top: 24px;
@@ -355,10 +356,10 @@ color: #000000;
 
 /* Inside auto layout */
 
-/* flex: none; */
-/* order: 2;
-flex-grow: 0; */
-border: 1px dotted gray;
+flex: none;
+ order: 2;
+flex-grow: 0;
+/* border: 1px dotted gray; */
 
 }
 
@@ -381,10 +382,10 @@ border: 1px dotted gray;
  
  /* Inside auto layout */
  
- /* flex: none; */
- /* order: 2;
- flex-grow: 0; */
- border: 1px dotted gray;
+ flex: none;
+ order: 2;
+ flex-grow: 0;
+ /* border: 1px dotted gray; */
  
 }
 .main-list-products{
@@ -458,10 +459,12 @@ border: 1px dotted gray;
   padding: 0px;
   gap: 24px;
   
+  position: relative;
   width: 1128px;
   height: 100%;
   
-  
+  top : 7rem;
+  left : 10%;
   /* Inside auto layout */
   
   flex: none;
@@ -471,30 +474,107 @@ border: 1px dotted gray;
 
 }
 
-.filter-icon{
-  width: 82px;
-  height: 110px;
-   
-  /* Inside auto layout */
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-}
-.filter-img{
-  box-sizing: border-box;
-width: 82px;
-height: 82px;
 
-background: #D9D9D9;
-border: 1px solid rgba(0, 0, 0, 0.1);
+.filter-wrapper{
+display: flex;
+flex-direction: row;
+
+position: relative;
+
+left: 30%;
+top : 5rem;
+
+/* Auto layout */
+
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 0px 0px 12px;
+gap: 36px;
+
+width: 554px;
+height: 122px;
+
 
 /* Inside auto layout */
 
 flex: none;
 order: 0;
 flex-grow: 0;
+
 }
-.filter-button-title{
+.filter-button{
+  display: flex;
+  flex-direction: column;
+  width: 82px;
+height: 110px;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+
+
+display: flex;
+flex-direction: column;
+align-items: center;
+/* padding: 0px;
+gap: 4px;
+
+position: absolute;
+width: 82px;
+height: 110px;
+left: 0px;
+top: 0px; */
+
+
+}
+
+.filter-icon{
+  box-sizing: border-box;
+
+width: 82px;
+height: 82px;
+
+background: #D9D9D9;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0;
+}
+
+
+/* width: 64px;
+height: 19px;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
+display: flex;
+align-items: center;
+text-align: center;
+
+color: #000000;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+flex-grow: 0; */
+
+
+.filter-text{
+  
+box-sizing: border-box;
 
 /* Auto layout */
 
@@ -507,58 +587,23 @@ padding: 0px;
 width: 30px;
 height: 24px;
 
-/* Inside auto layout */
+/* border-bottom: 3px solid #412DD4; */
 
-flex: none;
-order: 1;
-flex-grow: 0;
-}
-.filter-button{
-  display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-gap: 36px;
-
-position: relative;
-width: 554px;
-height: 110px;
-
-}
-.filter-icon{
-  box-sizing: border-box;
-
-  width: 82px;
-  height: 82px;
-  
-  background: #D9D9D9;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  
-  /* Inside auto layout */
-  
-  flex: none;
-  order: 0;
-  flex-grow: 0;
-
-}
-.filter-text{
-  display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-padding: 0px;
-
-width: 30px;
-height: 24px;
-
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 19px;
 
 /* Inside auto layout */
 
 flex: none;
 order: 1;
 flex-grow: 0;
-}
+} 
+
+/* 카드들 */
+
 .item-wrapper{
   position: absolute;
   width: 264px;
