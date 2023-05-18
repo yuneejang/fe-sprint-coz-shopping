@@ -107,7 +107,36 @@ body {
 
 
 } 
+.modal-wrapper{
+  top:25%;
+  left:25%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  width: 50%;
+  height: 50%;
+  object-fit: cover;
 
+}
+.close-btn{
+right: 5%;
+top : 5%;
+position: absolute;
+  
+}
+/* ahekf */
+
+/* .modal-wrapper{
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.6);
+} */
 /* 드롭 */
 #drop-wrapper{
   /* justify-content: flex-end; */
@@ -249,8 +278,9 @@ color: #000000;
 footer{
 
   display: flex;
-  position: relative;
-
+  position: absolute
+  ;
+  bottom : 0%;
   flex-direction: column;
 
   box-sizing: border-box;
@@ -322,23 +352,23 @@ color: #888888;
   align-items: center;
   padding: 0px;
   gap: 24px;
-  
-  position: relative;
-  /* width: 1280px; 
-  height: 832px;  */
-  width: 100%;
+  left:10%;
+  position: absolute;
+   width: 80%; 
+  /* height: 832px;  */
+  /* width: 100%; */
   height: calc(100vh - 7.5rem);
   /* overflow-y: scroll; */
   
   /* background: #FFFFFF; */
-  /* border: 1px dotted red; */
+  border: 1px dotted red;
 
 
 }
 .main-title-product{
   /* position: relative; */
 position: absolute;
-left: 15%;
+left: 0;
 /* right: 42.73%;  */
 top: 24px;
 
@@ -366,7 +396,7 @@ flex-grow: 0;
 .main-title-bookmark{
  position: relative;
  position: absolute;
- left: 15%;
+ left: 0%;
  /* right: 42.73%; */ 
  top: 400px;
  gap:24px;
@@ -395,15 +425,15 @@ flex-grow: 0;
 
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: 0px;
   gap: 24px;
   
-  width: 1128px;
+  width: 100%;
   height: 264px;
   
   top:72px;
-  left: 15%;
+  left: 0%;
 
   /* Inside auto layout */
   /* flex: none;
@@ -416,16 +446,16 @@ flex-grow: 0;
 .main-list-bookmark{
   position: absolute;
   top:472px;
-  left: 15%;
+  left: 0%;
 
   
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  /* align-items: flex-start; */
   padding: 0px;
   gap: 24px;
   
-  width: 1128px;
+  width: 100%;
   height: 264px;
   
   
@@ -436,6 +466,12 @@ flex-grow: 0;
   border: 1px dotted gray; 
 
 }
+
+.bookmarkitem{
+  border: 1px dotted gray; 
+
+}
+
 
 /* .grid{
   
@@ -605,17 +641,20 @@ flex-grow: 0;
 /* 카드들 */
 
 .item-wrapper{
-  position: absolute;
+  position: relative;
   width: 264px;
   height: 264px;
 /* Inside auto layout */
-
+padding: 10 20 30 40 ;
 /* flex: none; */
 /* order: 0; */
 /* flex-grow: 0; */
 display: flex;
 flex-direction: column;
 align-items: left;
+display: inline-block;
+
+
 }
 
 .item-img{
@@ -657,7 +696,10 @@ align-items: left;
   
   color: #000000;
 }
-.item-info-2{
+
+
+
+.item-info-detail{
   position: absolute;
   left: 0%;
   right: 0%;
