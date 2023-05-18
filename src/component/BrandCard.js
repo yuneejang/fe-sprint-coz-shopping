@@ -1,16 +1,31 @@
-import React from 'react'
+import React,{useState} from 'react'
 import BookmarkIcon from "./BookmarkIcon"
+import Modal from 'react-modal';
+
 export default function BrandCard({item}) {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
     <div className="item-wrapper" key={item.id} >
-      {/* <img className="item-img" src={`${process.env.PUBLIC_URL}/{item.img}`} alt={item.name}></img> */}
-      <img className="item-img" src='../images/Modal-1.png'alt={item.name}></img>
-      {/* 북마크된부분다시처리 */}
+         <img className="item-img" 
+        src={item.img } 
+        // src="../images/Modal-1.png"
+        alt={item.name}  
+        onClick={()=> setIsModalOpen(true)}
+      />
       <BookmarkIcon className="item-bookmark"/>
       <div className="item-info-name">브랜드명</div>
       <div className="item-info-interest">관심고객수</div>
       <div className="item-info-interest-numbers">12412412141</div>
+      <Modal  className ="modal-wrapper"isOpen={isModalOpen} onClick={()=> setIsModalOpen(false)} onRequestClose={() => setIsModalOpen(false)}>
+   <div className="close-btn">&times;</div>
+   <img 
+     src={item.src}
+     alt={item.name}
+     onClick={()=> setIsModalOpen(true)}
+     />   
+   </Modal>
+   
    </div>
   )
 }
