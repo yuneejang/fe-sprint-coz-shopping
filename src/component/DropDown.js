@@ -1,49 +1,70 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import styled from 'styled-components';
+import { useNavigate } from 'react-router-dom';
 
+import FooterBookmarkIcon from '../Img/북마크아이콘.png';
+import FooterProductIcon from '../Img/상품아이콘.png';
 
-function DropDown()  {
-  // const [isOpen, setIsOpen] = useDetectClose(dropDownRef, false);
- 
+const DropDownBody = styled.ul`
+  position: absolute;
+  width: 200px;
+  height: 150px;
+  background: #ffffff;
+  border-radius: 10px;
+  filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.1));
+  margin: 210px -45px 0 0;
+  padding: 0;
+  right: 5%;
+  top: -170%;
+
+  &::after {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 15px 15px;
+    border-color: #ffffff transparent;
+    top: -15px;
+    left: 90px;
+  }
+`;
+const DropdownSection = styled.li`
+  display: flex;
+  height: 50px;
+  font-size: 16px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+`;
+
+const DropdownIcon = styled.img`
+  width: 20px;
+  height: 20px;
+  margin: 7px;
+`;
+
+function DropDown() {
+  const navigate = useNavigate();
   return (
-
-  <div id="drop-wrapper" >
-        <img
-          id="poligon"
-          src={`${process.env.PUBLIC_URL}/images/polygon.png`}
-          alt="polygon"
-          />
-      <div className="drop-down">
-        <Link to="/" className="drop-menu "  role="menuitem" tabIndex="-1" id="menu-item-0">
-          <div className='drop-hello'>ooo님 안녕하세요 !</div>
-          </Link>
-              
-        <Link to="/products/list" className="drop-menu" role="menuitem" tabIndex="-1" id="menu-item-1">
-       
-          <img
-                    id="drop-icon"
-                    src={`${process.env.PUBLIC_URL}/images/product-icon.png`}
-                    alt="product-icon"
-          />
-            
-            <div id='drop-link'> 상품리스트 페이지</div>
-          </Link>
-       
-        
-          <Link to="/bookmark" className="drop-bookmark" role="menuitem" tabIndex="-1" id="menu-item-2"> 
-          <img
-                    id="drop-icon"
-                    src={`${process.env.PUBLIC_URL}/images/bookmark-icon.png`}
-                    alt="bookmark-icon"
-                />
-                
-                <div id='drop-link'>북마크 페이지</div>
-     
-          </Link>
-        </div >
-  </div>
-
-  )
+    <DropDownBody>
+      <DropdownSection>OOO님, 안녕하세요!</DropdownSection>
+      <DropdownSection
+        onClick={() => {
+          navigate('/products/list');
+        }}
+      >
+        <DropdownIcon src={FooterProductIcon} />
+        상품리스트 페이지
+      </DropdownSection>
+      <DropdownSection
+        onClick={() => {
+          navigate('/bookmark');
+        }}
+      >
+        <DropdownIcon src={FooterBookmarkIcon} />
+        북마크 페이지
+      </DropdownSection>
+    </DropDownBody>
+  );
 }
 
-export default  DropDown;
+export default DropDown;
